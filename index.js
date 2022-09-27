@@ -170,8 +170,8 @@ Miku.sendMessage(anu.id, buttonMessage)
                     mikutext = `
 مع السلامه 👋, @${WAuserName.split("@")[0]},
 
-مع السلامه تطلع يجي غيرك😍!
-`
+مع السلامه اللي يغور يجي مكانو طابور😍/واللي بعنا خسر دلعنا😂💔?
+
 
     let buttonMessage = {
 	image:await getBuffer(ppuser),
