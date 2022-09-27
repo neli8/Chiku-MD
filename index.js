@@ -151,9 +151,9 @@ Miku.ev.on('group-participants.update', async (anu) => {
                 mikutext = `
 هلا @${WAuserName.split("@")[0]},
 
-انا *BOT-ELGAZAR*, مرحبا بك في ${metadata.subject}.
+انا *botelgazar*, مرحبا بك في ${metadata.subject}.
 
-*Group Description:*
+*وصف الجروب:*
 ${metadata.desc}
 `
 
@@ -170,8 +170,8 @@ Miku.sendMessage(anu.id, buttonMessage)
                     mikutext = `
 مع السلامه 👋, @${WAuserName.split("@")[0]},
 
-مع السلامه اللي يغور يجي مكانو طابور😍/واللي بعنا خسر دلعنا😂💔?
-
+مع السلامه اللي يغور يجي مكانو طابور😍, واللي بعنا خسر دلعنا😂💔!
+`
 
     let buttonMessage = {
 	image:await getBuffer(ppuser),
