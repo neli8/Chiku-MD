@@ -2187,7 +2187,7 @@ await Miku.sendMessage(m.chat, { delete: key })
  if (args[0] === "on") {
  if (AntiLinkTwitter) return replay('Already activated')
  ntilinkall.push(from)
- replay('Enabled all antilink !')
+ replay('Enabled all antilink/تم تفعيل منع جميع الروابط !')
  var groupe = await Miku.groupMetadata(from)
  var members = groupe['participants']
  var mems = []
@@ -5088,10 +5088,10 @@ case '':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const needhelpmenu = `Did you mean *${prefix}help*.`
+ const needhelpmenu = `Did you mean/هل تعني *${prefix}help/المساعده*.`
      
          let butRun = [
-                {buttonId: `-help`, buttonText: {displayText: 'Help'}, type: 1}
+                {buttonId: `-help`, buttonText: {displayText: 'Help/مساعده'}, type: 1}
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku.mp4'),gifPlayback:true,
@@ -5185,14 +5185,14 @@ case 'add': case 'اضافه':{
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
         if (!m.isGroup) return replay(mess.grouponly)
-    reply(`Running repl....Please wait until repl.it responds...`)						
+    reply(`Running repl....Please wait until repl.it responds/جاري إعادة التشغيل .... يرجى الانتظار حتى يستجيب Rep.it ...`)						
     var replqr =  await getBuffer(`https://miku-qr--fantox001.repl.co/`)
                                var qrbutton = [
-            {buttonId: `-qr`, buttonText: {displayText: `Re-run Repl`}, type: 1}
+            {buttonId: `-qr`, buttonText: {displayText: `Re-run Repl/باركود جديد`}, type: 1}
             ]
           let bmffg = {
            image: replqr,
-           caption:  `Scan the qr within 10-15 seconds...`,
+           caption:  `Scan the qr within 10-15 seconds/امسح الباركود خلال 10-15 ثانية ...`,
           footer: `${global.BotName}`,
           buttons: qrbutton,
           headerType: 4
