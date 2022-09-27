@@ -706,7 +706,7 @@ user.afkReason = ''
 
 
 if (m.mtype === 'groupInviteMessage') {
-teks = `I can't join the group untill my *Owner* ask me to join. Type *-owner* to get owner number and ask him.`
+teks = `لا يمكنني الانضمام إلى المجموعة حتى يطلب مني * المالك * الانضمام. اكتب * المالك * لتحصل على رقم المالك واسأله.`
 sendOrder(m.chat, teks, "5123658817728409", fs.readFileSync('./Assets/pic10.jpg'), `${watermark}`, `${BotName}`, "916909137213@s.whatsapp.net", "AR7zJt8MasFx2Uir/fdxhkhPGDbswfWrAr2gmoyqNZ/0Wg==", "99999999999999999999")
 }
 
@@ -714,15 +714,15 @@ sendOrder(m.chat, teks, "5123658817728409", fs.readFileSync('./Assets/pic10.jpg'
 if (AntiLink) {
     linkgce = await Miku.groupInviteCode(from)
     if (budy.includes(`https://chat.whatsapp.com/${linkgce}`)) {
-    reply(`\`\`\`「  Antilink System  」\`\`\`\n\nNo action will be because you sent this group's link.`)
+    reply(`\`\`\`「  منع الروابط  」\`\`\`\n\nلن يتم اتخاذ أي إجراء لأنك أرسلت رابط هذه المجموعة.`)
     } else if (isUrl(m.text)) {
-    bvl = `\`\`\`「  *Antilink System*  」\`\`\`\n\nAdmin has sent a link so no action is taken.`
+    bvl = `\`\`\`「  *منع الروابط*  」\`\`\`\n\nارسل الادمن رابط والادمن حر في ارسال اس شئ.`
     if (isAdmins) return reply(bvl)
     if (m.key.fromMe) return reply(bvl)
     if (isCreator) return reply(bvl)
     kice = m.sender
     await Miku.groupParticipantsUpdate(m.chat, [kice], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
-    Miku.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka Has been removed for sending link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+    Miku.sendMessage(from, {text:`\`\`\`「  منع الروابط  」\`\`\`\n\n@${kice.split("@")[0]} تم طرده لانه ارسل رابط في المجموعه!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
     } else {
     }
     }
@@ -875,13 +875,13 @@ if (antiVirtex) {
         if (AntiLinkAll)
            if (budy.includes("https://")){
         if (!isBotAdmins) return
-        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink sent by Admin so no action will be taken!`
+        bvl = `\`\`\`「  منع الروابط 」\`\`\`\n\nالادمن ارسل رابط والادمن حر في ارسال اي رابط`
         if (isAdmins) return reply(bvl)
         if (m.key.fromMe) return reply(bvl)
         if (isCreator) return reply(bvl)
         kice = m.sender
         await Miku.groupParticipantsUpdate(m.chat, [kice], 'remove')
-        Miku.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka has been removed for sending links in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+        Miku.sendMessage(from, {text:`\`\`\`「  منع الروابط  」\`\`\`\n\n@${kice.split("@")[0]} تم طرده لانه ارسل رابط في المجموعه!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
         } else {
         }
         
@@ -896,7 +896,7 @@ ${themeemoji} Date : ${moment.tz('Asia/Kolkata').format('DD/MM/YYYY')}
 ${themeemoji} MessageType : ${m.mtype}`
 Miku.sendTextWithMentions(m.chat, teks, m)
 await sleep(500)
-m.copyNForward(m.chat, true, { readViewOnce: true }).catch(_ => reply(`Maybe it's been opened by a bot`))
+m.copyNForward(m.chat, true, { readViewOnce: true }).catch(_ => reply(`ربما تم فتحه بواسطة بوت`))
 }
 
 
@@ -1326,32 +1326,32 @@ const ftroli = {
 
 
     const menulist = `
-    Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: Ayush to take your WhatsApp usage into next level.
+    Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a تم تطوير البوت بواسطه 𝑬𝑳𝑮𝑨𝒁𝑨𝑹 𝑨𝑳𝑾𝑨𝒁𝑬𝑹.
         
-       「 System Info 」
+       「 System Info/معلومات النظام 」
     
-    Speed : ${latensie.toFixed(4)} miliseconds
-    Up Time : ${runtime(process.uptime())}
-    Bot Name : ${global.BotName}
-    Owner Name : ${global.OwnerName}
-    𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : Amazon AWS
-    𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.users).length}
-    
-    
-       「 User Info 」
-    
-    User Level: ${levelMenu}
-    User XP : ${xpMenu} \ ${reqXp}
-    User Role : ${role}
+    Speed/السرعه : ${latensie.toFixed(4)} miliseconds/مللي ثانية
+    Up Time/مدة التشغيل : ${runtime(process.uptime())}
+    Bot Name/اسم البوت : ${global.BotName}
+    Owner Nameاسم المطور : ${global.OwnerName}
+    𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺/برنامج : Amazon AWS
+    𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿_مجموع المستخدم : ${Object.keys(global.db.users).length}
     
     
-       「 User Bank 」
+       「 User Info/معلومات المستخدم 」
     
-    User Balance : ${uangku}
-    Iron : ${getBesi(m.sender)}
-    Gold : ${getEmas(m.sender)}
+    User Level/مستوى المستخدم: ${levelMenu}
+    User XP/مستخدمxp : ${xpMenu} \ ${reqXp}
+    User Role/دور المستخدم : ${role}
+    
+    
+       「 User Bank/بنك المستخدم 」
+    
+    User Balance/رصيد المستخدم : ${uangku}
+    Iron/حديد : ${getBesi(m.sender)}
+    Gold/ذهب : ${getEmas(m.sender)}
     Emarald : ${getEmerald(m.sender)}
-    Potion : ${getPotion(m.sender)}
+    Potion/جرعة : ${getPotion(m.sender)}
     
     
     Type *-menu* or press any button below to start using *${global.BotName}*
@@ -1373,9 +1373,9 @@ switch(command) {
     case 'sc': case 'script': case 'sourcecode': {
         if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-    teks = `*${global.BotName}'s Script*\n\n*GitHub*: ${global.BotSourceCode}\n\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
+    teks = `*${global.BotName}'s سكريبت*\n\n*يوتيوب*: ${global.BotSourceCode}\n\nلا تنسي ان تشترك في قناه اليوتيوب. `
     let buttons = [
-    {buttonId: `-menu`, buttonText: {displayText: '✨Bot Menu✨'}, type: 1}
+    {buttonId: `-menu`, buttonText: {displayText: '✨قائمه البوت✨'}, type: 1}
     ]
     let buttonMessage = {
     image: Thumb,
@@ -1399,7 +1399,7 @@ switch(command) {
     break
 
 
-case 'me': case 'profile': case 'p':
+case 'بروفايل': case 'profile': case 'p':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
   if (!isDarah){ addInventoriDarah(m.sender, DarahAwal) }
@@ -1421,7 +1421,7 @@ case 'me': case 'profile': case 'p':
       pfp ='https://wallpapercave.com/wp/wp10524580.jpg'
     }
 
-     const profilexx = `*「  Profile Info  」*\n\n*User Name* : ${pushname}\n*Bio* : ${bioo}\n*Group Admin Status* : ${adn}\n*Level* : ${levelMenu}\n*Exp* : ${xpMenu} out of ${reqXp}\n*Role* : ${role}`
+     const profilexx = `*「  Profile Info  」*\n\n*User Name/الاسم* : ${pushname}\n*Bio/بايو* : ${bioo}\n*Group Admin Status/حاله الادمن* : ${adn}\n*Level/المستوي* : ${levelMenu}\n*Exp/اكسب* : ${xpMenu} out of/ بعيدا عن المكان ${reqXp}\n*Role/دور* : ${role}`
  
 
 
@@ -1440,7 +1440,7 @@ let buttonspro = [
             break
 
 
-case 'banchat': case 'bangroup':{
+case 'banchat': case 'bangroup': case 'بان':{
 if (isBan) return reply(mess.banned)	 			
 if (!isCreator) return replay(mess.botowner)
 if (args[0] === "on") {
@@ -1461,8 +1461,8 @@ banchat.splice(off, 1)
 replay('This Group has been *unbanned* from using me!')
 } else {
   let buttonsntnsfw = [
-  { buttonId: `-bangroup on`, buttonText: { displayText: 'Ban' }, type: 1 },
-  { buttonId: `-bangroup off`, buttonText: { displayText: 'Unban' }, type: 1 }
+  { buttonId: `-bangroup on`, buttonText: { displayText: 'حظر' }, type: 1 },
+  { buttonId: `-bangroup off`, buttonText: { displayText: 'الغاء الحظر' }, type: 1 }
   ]
   await Miku.sendButtonText(m.chat, buttonsntnsfw, `Please choose any Button below.\n\n *On / Off*`, `${global.BotName }`, m)
   }
@@ -1473,21 +1473,21 @@ replay('This Group has been *unbanned* from using me!')
 
 
 case 'botgrups':
-case 'botgroups':
+case 'جروب':
 case 'botgrup':
-case 'botgroup':
+case 'جروب.البوت':
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-reply(` Don't forget to join yeah!
+reply(` Don't forget to join/لا تنسي الانضمام!
 
-*GROUP 1*
-https://chat.whatsapp.com/DYp7FwfL9xsKURihcdT0l8
+*GROUP/جروب 1*
+https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn
 
-*GROUP 2*
-https://chat.whatsapp.com/DYp7FwfL9xsKURihcdT0l8
+*GROUP/جروب 2*
+https://chat.whatsapp.com/JUngwIYTMVzCxMuismJuOY
 
-*GROUP 3*
-https://chat.whatsapp.com/DYp7FwfL9xsKURihcdT0l8`)
+*GROUP/جروب 3*
+https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn`)
 break
 case 'getsxvdxcmd': {
 if (isBan) return reply(mess.ban)	 			
@@ -1499,14 +1499,14 @@ Miku.sendMessage(from, {sticker:{url:"https://ZackMiku.github.io/media/groupclos
 break
 
 
-case 'support': case 'supportgc':
+case 'support': case 'الدعم':
     
-    reply(`*My developer's group:*https://chat.whatsapp.com/DYp7FwfL9xsKURihcdT0l8 `)
+    reply(`*My developer's group/جروب مطوري:*https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn `)
     break
 
-case 'repo': case 'botrepo':
+case 'repo': case 'ابلاغ':
     
-    reply(`*My whatsapp group:* https://chat.whatsapp.com/DYp7FwfL9xsKURihcdT0l8`)
+    reply(`*My whatsapp group/جروب مطوري:* https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn)
     break
 
 case 'nsfwmenu':
@@ -1675,7 +1675,7 @@ let sections = []
 
 
   case 'grupsetting':
-    case 'groupsetting':{
+    case 'اعدادات':{
         if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
             let sections = []
@@ -1705,10 +1705,10 @@ if (isBanChat) return reply(mess.bangc)
             const sendm =  Miku.sendMessage(
 from, 
 {
-text: "Group Settings",
+text: "Group Settings/اعدادات الجروب",
 footer: BotName,
 title: "Set your group settings here...",
-buttonText: "Click Button",
+buttonText: "Click Button/اضغط علي الزر",
 sections
 }, { quoted : m }
 )  
@@ -1726,7 +1726,7 @@ case 'animesearchxxx': case 'anime':{
     break
 */
 
-case 'coffee': case 'kopi': {
+case 'coffee': case 'قهوه': {
         if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
                 let buttons = [
@@ -1793,7 +1793,7 @@ case 'delete': case 'del': {
  break
 */
 
- case 'deleteall': case 'delall': case 'delete': case 'del': {
+ case 'حذف': case 'مسح': case 'delete': case 'del': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!isBotAdmins) return replay(mess.botadmin)
@@ -1838,7 +1838,7 @@ await Miku.sendMessage(m.chat, { delete: key })
   } else {
   loldd = metadata.owner
   }
-  teks += `\n\nName : ${metadata.subject ? metadata.subject : "undefined"}\nOwner : ${loldd ? '@' + loldd.split("@")[0] : "undefined"}\nID : ${metadata.id ? metadata.id : "undefined"}\nMade : ${metadata.creation ? moment(metadata.creation * 1000).tz('Asia/Kolkata').format('DD/MM/YYYY HH:mm:ss') : "undefined"}\nMember : ${metadata.participants.length ? metadata.participants.length : "undefined"}`
+  teks += `\n\nName/الاسم : ${metadata.subject ? metadata.subject : "undefined"}\nOwner/المالك : ${loldd ? '@' + loldd.split("@")[0] : "undefined"}\nID/ايدي : ${metadata.id ? metadata.id : "undefined"}\nMade/الحاله : ${metadata.creation ? moment(metadata.creation * 1000).tz('Asia/Kolkata').format('DD/MM/YYYY HH:mm:ss') : "undefined"}\nMember/الرقم : ${metadata.participants.length ? metadata.participants.length : "undefined"}`
  }
  Miku.sendTextWithMentions(m.chat, teks, m)
  }
@@ -2226,7 +2226,7 @@ await Miku.sendMessage(m.chat, { delete: key })
    break
 
 
-   case 'nsfw': {
+   case 'nsfw': case 'الاباحي': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -2286,14 +2286,14 @@ replay("Error")
 break
 
 
-case 'listonline': case 'listaktif': case 'here':{
+case 'listonline': case 'المتصلين': case 'here':{
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
  let online = [...Object.keys(store.presences[id]), botNumber]
  let liston = 1
- Miku.sendText(m.chat, '  「 *Online Members* 」\n\n' + online.map(v => `${liston++} . @` + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
+ Miku.sendText(m.chat, '  「 *قائمه المتصلين* 」\n\n' + online.map(v => `${liston++} . @` + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
  }
  break
 
@@ -2335,7 +2335,7 @@ case 'happymod': {
  teks += `${i.link}`
  }
  let buttons = [
- {buttonId: `-menu`, buttonText: {displayText: '✨Menu✨'}, type: 1}
+ {buttonId: `-menu`, buttonText: {displayText: '✨Menu/القائمه✨'}, type: 1}
  ]
  let buttonMessage = {
  image: {url:res[0].icon},
@@ -2350,7 +2350,7 @@ case 'happymod': {
  }
  break
 
- case 'yts': case 'ytsearch': {
+ case 'yts': case 'بحث': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!args.join(" ")) return replay(`Example : -yts Heat waves`)
@@ -2420,12 +2420,12 @@ if (isBanChat) return reply(mess.bangc)
  }
  break
 
- case 'tag': case 'tagall': case 'all':{
+ case 'منشن': case 'tagall': case 'تاك':{
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
- let teks = `「 _Tag All_ 」
+ let teks = `「 _Tag All/منشن للكل_ 」
   
  *Message : ${args.join(" ") ? args.join(" ") : 'no message'}*\n\n`
  for (let mem of participants) {
@@ -2435,7 +2435,7 @@ if (isBanChat) return reply(mess.bangc)
  }
  break
 
- case 'hidetag': {
+ case 'hidetag': case 'وهمي': case 'مخفي': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -2550,7 +2550,7 @@ let mentioned = participants.map(v => v.jid)
 
 
 
- case 'grouplink': case 'gclink': {
+ case 'grouplink': case 'لينك': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -2577,9 +2577,9 @@ let mentioned = participants.map(v => v.jid)
  case 'resetlinkgc':
     case 'resetlinkgroup':
     case 'resetlinkgrup':
-    case 'revoke':
+    case 'رستر':
     case 'resetlink':
-    case 'resetgrouplink':
+    case 'رسترلينك':
     case 'resetgclink':
     case 'resetgruplink': {
        if (isBan) return reply(mess.banned)	 			
@@ -2592,7 +2592,7 @@ let mentioned = participants.map(v => v.jid)
     break
 
 
-    case 'group': case 'grup': {
+    case 'group': case 'جروب': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!m.isGroup) return replay(mess.grouponly)
@@ -2604,8 +2604,8 @@ let mentioned = participants.map(v => v.jid)
      await Miku.groupSettingUpdate(m.chat, 'not_announcement').then((res) => replay(`Group has been opened!`)).catch((err) => replay(jsonformat(err)))
      } else {
      let buttons = [
-     { buttonId: '-group open', buttonText: { displayText: 'Open' }, type: 1 },
-     { buttonId: '-group close', buttonText: { displayText: 'Close' }, type: 1 }
+     { buttonId: '-group open', buttonText: { displayText: 'Open/فتح' }, type: 1 },
+     { buttonId: '-group close', buttonText: { displayText: 'Close/قفل' }, type: 1 }
      ]
      let buttonMessage = {
      image: BotLogo,
@@ -2620,41 +2620,41 @@ let mentioned = participants.map(v => v.jid)
      }
      break
 
-     case 'promote': {
+     case 'promote': case 'رفع': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!m.isGroup) return replay(mess.grouponly)
      if (!isBotAdmins) return replay(mess.botadmin)
      if (!isAdmins && !isCreator) return replay(mess.useradmin)
-     let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+     let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'رفعتو ادمن@s.whatsapp.net'
      await Miku.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => replay(jsonformat(res))).catch((err) => replay(jsonformat(err)))
      }
      break
 
-     case 'demote': {
+     case 'demote': case 'تنزيل': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!m.isGroup) return replay(mess.grouponly)
      if (!isBotAdmins) return replay(mess.botadmin)
      if (!isAdmins && !isCreator) return replay(mess.useradmin)
-     let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+     let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'نزلتو من الادمن@s.whatsapp.net'
      await Miku.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => replay(jsonformat(res))).catch((err) => replay(jsonformat(err)))
      }
      break
 
-     case 'remove':{
+     case 'remove': case 'طرد':{
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!m.isGroup) return replay(mess.grouponly)
      if (!isBotAdmins) return replay(mess.botadmin)
      if (!isAdmins && !isCreator) return replay(mess.useradmin)
-     let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+     let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'تم طرده@s.whatsapp.net'
      await Miku.groupParticipantsUpdate(m.chat, [users], 'remove')
      }
      break
 
 
-     case 'join': {
+     case 'join': case 'انضم': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!isCreator) return replay(mess.botowner)
@@ -2796,7 +2796,7 @@ reply(`\`\`\`「 _Calculator Tool_ 」\`\`\`\n\n*Input :* ${qsd}\n*Calculation R
 }
 break
 
-case 'public': {
+case 'public': case 'عام': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!isCreator) return reply(mess.owner)
@@ -2806,7 +2806,7 @@ case 'public': {
  }
  break
  
- case 'self': {
+ case 'self': case 'خاص': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!isCreator) return reply(mess.botowner)
@@ -2817,7 +2817,7 @@ case 'public': {
  break
 
 
-case 'toimage': case 'toimg': {
+case 'toimage': case 'toimg': case 'لصوره': {
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!m.quoted) return reply('Reply Image')
@@ -2835,7 +2835,7 @@ fs.unlinkSync(ran)
 }
 break
 
-case 'tomp4': case 'tovideo': {
+case 'tomp4': case 'tovideo': case 'لفيديو': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.quoted) return reply('Reply Image')
@@ -2849,7 +2849,7 @@ case 'tomp4': case 'tovideo': {
  }
  break
 
-case 'toaud': case 'toaudio': {
+case 'toaud': case 'toaudio': case 'لصوتي': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`Send/Reply Video/Audio You Want To Use As Audio With Caption ${prefix + command}`)
@@ -2877,7 +2877,7 @@ case 'tomp3': {
 break
 
 
-case 'togif': case 'getgif':{
+case 'togif': case 'getgif': case 'لمتحرك':{
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.quoted) return reply('Reply Image')
@@ -2910,7 +2910,7 @@ case 'togif': case 'getgif':{
  break
 
 
- case 'owner': case 'creator': case 'mod': case 'mods':{
+ case 'owner': case 'creator': case 'المالك': case 'المطور':{
     Miku.sendContact(m.chat, global.Owner, m)
     }
     break
@@ -2926,7 +2926,7 @@ case 'translate': case 'trans': {
     break
 
 
-case 'gimage': case 'gig': case 'googleimage':{
+case 'gimage': case 'صوره': case 'صورة':{
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!args[0]) return reply("Enter a search term to get Google Image!")
@@ -3141,7 +3141,7 @@ case 'twddlxx': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let buttons = [
- {buttonId: `-menu`, buttonText: {displayText: '✨Menu✨'}, type: 1}
+ {buttonId: `-menu`, buttonText: {displayText: '✨Menu/القائمه✨'}, type: 1}
  ]
  let buttonMessage = {
  video: {url:args[0]},
@@ -3226,7 +3226,7 @@ case 'fbddlxx': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let buttons = [
- {buttonId: `-menu`, buttonText: {displayText: '✨Menu✨'}, type: 1}
+ {buttonId: `-menu`, buttonText: {displayText: '✨Menu/القائمه✨'}, type: 1}
  ]
  let buttonMessage = {
  video: {url:args[0]},
@@ -3367,7 +3367,7 @@ reply("Error link!")
 }
 break
 
-case 'music': case 'play': case 'song': case 'ytplay': {
+case 'تشغيل': case 'play': case 'song': case 'شغل': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let yts = require("yt-search")
@@ -4785,12 +4785,12 @@ for (let yoi of anu) {
 await sleep(1500)
 let btn = [{
 quickReplyButton: {
-displayText: '✨Menu✨',
+displayText: '✨Menu/القائمه✨',
 id: '-menu'
 }  
 }, {
 quickReplyButton: {
-displayText: 'Bot Owner',
+displayText: 'Bot Owner/مالك البوت',
 id: '-owner'
 }
 }]
@@ -4802,7 +4802,7 @@ replay('Broadcast Sent !')
 break    
 
 
-case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
+case 'القايمه': case 'القائمه': case 'menu': case 'الاوامر': case 'اوامر':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
       
@@ -5135,7 +5135,7 @@ const mikuarray= [
 
 break
 
-case 'add':{     			
+case 'add': case 'اضافه':{     			
     if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
  let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
@@ -5163,7 +5163,7 @@ case 'add':{
     break
 
 
-    case 'qr': case 'qrcode':
+    case 'qr': case 'باركود':
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
         if (!m.isGroup) return replay(mess.grouponly)
