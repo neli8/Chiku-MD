@@ -1370,12 +1370,12 @@ return list[Math.floor(list.length * Math.random())]
 
 switch(command) {
 	
-    case 'sc': case 'سكريبت': case 'sourcecode': {
+    case 'sc': case 'التبرع': case 'sourcecode': {
         if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-    teks = `*${global.BotName}'s Script*\n\n*GitHub*: ${global.BotSourceCode}\n\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
+    teks = `*${global.BotName}'s Script*\n\n*Yotube/يوتيوب*: ${global.BotSourceCode}\n\nلا تنسي الاشتراك بقناه اليوتيوب⭐️. `
     let buttons = [
-    {buttonId: `-menu`, buttonText: {displayText: '✨Bot Menu✨'}, type: 1}
+    {buttonId: `-menu`, buttonText: {displayText: '✨Bot Menu/قائمه البوت✨'}, type: 1}
     ]
     let buttonMessage = {
     image: Thumb,
@@ -1399,7 +1399,7 @@ switch(command) {
     break
 
 
-case 'بروفايل': case 'profile': case 'p':
+case 'بروفايل': case 'profile': case 'انا':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
   if (!isDarah){ addInventoriDarah(m.sender, DarahAwal) }
@@ -1421,7 +1421,7 @@ case 'بروفايل': case 'profile': case 'p':
       pfp ='https://wallpapercave.com/wp/wp10524580.jpg'
     }
 
-     const profilexx = `*「  Profile Info/معلوماتي الشخصيه  」*\n\n*User Name/الاسم* : ${pushname}\n*Bio/البايو* : ${bioo}\n*Group Admin Status/حالة ادمن المجموعة* : ${adn}\n*Level/المستوي* : ${levelMenu}\n*Exp/امسب* : ${xpMenu} out of/بعيدا عن المكان ${reqXp}\n*Role/دور* : ${role}`
+     const profilexx = `*「  Profile Info/معلوماتي الشخصيه  」*\n\n*User Name/الاسم* : ${pushname}\n*Bio/البايو* : ${bioo}\n*Group Admin Status/حالة ادمن المجموعة* : ${adn}\n*Level/المستوي* : ${levelMenu}\n*Exp/اكسب* : ${xpMenu} out of/بعيد عن المكان ${reqXp}\n*Role/دور* : ${role}`
  
 
 
@@ -1504,9 +1504,9 @@ case 'support': case 'الدعم':
     reply(`*My developer's group/جروب الدعم:*https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn `)
     break
 
-case 'وصف': case 'الوصف':
+case 'الشرح': case 'الوصف':
     
-    reply(`*وصف الجروب:* ｢🤖｣─━─━⌬*
+    reply(`*⌬━─━─｢🤖｣─━─━⌬*
 *↵｢مــــــرحبــاً بكم 🗿｣*
 
 *↵｢قروب تعليم صناعة البوتات 😁｣*
@@ -1523,7 +1523,7 @@ case 'وصف': case 'الوصف':
 *↵｢نرجو ان تعملو لايك والاشتراك منها عشان يكبر جروب التعليم ومنها عشان ينتشر الفيديو والكل يستفيد✨🤗｣*
 
 *↵｢القروب｣*
-*↵｢ https://chat.whatsapp.com/Gb62eN2S5yI9mhfdn6Ma4z ｣*
+*↵｢ https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn ｣*
 *⌬━─━─｢🤖｣─━─━⌬*`)
     break
 
@@ -1531,7 +1531,7 @@ case 'nsfwmenu':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!AntiNsfw) return reply(mess.nonsfw)
-        reply(` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\nhentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
+        reply(` *━━━〈  📛 NSFW Menu/قائمه الاباحي 📛  〉━━━*\n\nhentaivideo, blowjobgif, hneko, masturbation, thighs, pussy, panties, orgy, ahegao, ass, bdsm, blowjob, cuckold, ero, gasm, cum, femdom, foot, gangbang, glasses, jahy, trap, blowjobgif, spank, hneko, hwaifu, gasm`)
     break
 
 case 'reaction': case 'react': case 'reactions': case 'r':
@@ -2353,7 +2353,7 @@ case 'happymod': {
  teks += `${i.link}`
  }
  let buttons = [
- {buttonId: `-menu`, buttonText: {displayText: '✨Menu✨'}, type: 1}
+ {buttonId: `-menu`, buttonText: {displayText: '✨Menu/القائمه✨'}, type: 1}
  ]
  let buttonMessage = {
  image: {url:res[0].icon},
@@ -3159,7 +3159,7 @@ case 'twddlxx': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let buttons = [
- {buttonId: `-menu`, buttonText: {displayText: '✨Menu✨'}, type: 1}
+ {buttonId: `-menu`, buttonText: {displayText: '✨Menu/القائمه✨'}, type: 1}
  ]
  let buttonMessage = {
  video: {url:args[0]},
@@ -3244,7 +3244,7 @@ case 'fbddlxx': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let buttons = [
- {buttonId: `-menu`, buttonText: {displayText: '✨Menu✨'}, type: 1}
+ {buttonId: `-menu`, buttonText: {displayText: '✨Menu/القائمه✨'}, type: 1}
  ]
  let buttonMessage = {
  video: {url:args[0]},
@@ -4803,7 +4803,7 @@ for (let yoi of anu) {
 await sleep(1500)
 let btn = [{
 quickReplyButton: {
-displayText: '✨Menu✨',
+displayText: '✨Menu/القائمه✨',
 id: '-menu'
 }  
 }, {
