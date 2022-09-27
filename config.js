@@ -14,7 +14,7 @@ global.BotName = "❤️ᗴᒪᘜᗩᘔᗩᖇ ᗷOT❤️"
 global.packname = "★الجزار الرزير يروحي]★"
 global.author = "★201098906252 ★"
 global.OwnerName = "ᗴᒪᘜᗩᘔᗩᖇ ᗩᒪᗯᗩᘔᗴᖇ❤️"
-global.BotSourceCode = "https://github.com/Ayush-pandey-u/Chiku-MD"
+global.BotSourceCode = "https://youtube.com/channel/UCxVaIay8BccgBtsofagA6_g"
 global.SupportGroupLink = "https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn"
 global.sessionName = "session"
 
