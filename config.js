@@ -10,8 +10,8 @@ global.antitags = true
 global.Owner = ['201098906252']
 global.OwnerNumber = ['201098906252']
 global.ownertag = ['201098906252']
-global.BotName = "❤️بعد متخلص تعديل❤️"
-global.packname = "★الجزار الرزير يروحي]★"
+global.BotName = "❤️ᗷOT ᗴᒪᘜᗩᘔᗩᖇ❤️"
+global.packname = "★الجزار الوزير يروحي]★"
 global.author = "★01098906252★"
 global.OwnerName = "ᗴᒪᘜᗩᘔᗩᖇ ᗩᒪᗯᗩᘔᗴᖇ❤️"
 global.BotSourceCode = "https://youtube.com/channel/UCxVaIay8BccgBtsofagA6_g"
@@ -27,7 +27,7 @@ global.location = "bihar, India"
 global.reactmoji = "❤️"
 global.themeemoji = "🍭"
 global.vidmenu = { url: 'https://c.tenor.com/YGuLegQWubwAAAPo/miku-nakano-gotoubun-no-hanayome.mp4' }
-global.websitex = "https://github.com/Ayush-pandey-u/Chiku-MD"
+global.websitex = "https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn"
 global.lolhuman = "KaysaS"
 
 
