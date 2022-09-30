@@ -151,7 +151,7 @@ Miku.ev.on('group-participants.update', async (anu) => {
                 mikutext = `
 هلا بيك يعمري @${WAuserName.split("@")[0]},
 
-انا *Bot_Elgazar*, مرحبا بك في ${metadata.subject}.
+انا *ᗷOT-ᗴᒪᘜᗩᘔᗩᖇ*, مرحبا بك في ${metadata.subject}.
 
 *وصف الجروب:*
 ${metadata.desc}
