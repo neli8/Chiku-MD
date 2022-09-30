@@ -1389,8 +1389,8 @@ switch(command) {
     body: " ", 
     thumbnail: fs.readFileSync("Assets/pic2.jpg"),
     mediaType:1,
-    mediaUrl: 'https://wallpapercave.com/wp/wp10524580.jpg',
-    sourceUrl: "https://wallpapercave.com/wp/wp10524580.jpg"
+    mediaUrl: 'https://telegra.ph/file/f1a719ad79f830231d984.jpg',
+    sourceUrl: "https://telegra.ph/file/f1a719ad79f830231d984.jpg"
     }}*/
 
     }
@@ -1418,7 +1418,7 @@ case 'بروفايل': case 'profile': case 'انا':
     
           } catch (e) {
      
-      pfp ='https://wallpapercave.com/wp/wp10524580.jpg'
+      pfp ='https://telegra.ph/file/f1a719ad79f830231d984.jpg'
     }
 
      const profilexx = `*「  معلوماتي الشخصيه  」*\n\n*الاسم* : ${pushname}\n*البايو* : ${bioo}\n*حالة ادمن المجموعة* : ${adn}\n*المستوي* : ${levelMenu}\n*اكسب* : ${xpMenu} بعيد عن المكان ${reqXp}\n*دور* : ${role}`
@@ -2443,11 +2443,11 @@ if (isBanChat) return reply(mess.bangc)
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
- let teks = `══✪〘 *👥 منشن للكل* 〙✪══
+ let teks = `══✪〘 *منشن للكل👥* 〙✪══
   
- *Message/الرساله : ${args.join(" ") ? args.join(" ") : 'no message'}*\n\n`
+ *Message/الرساله : ${args.join(" ") ? args.join(" ") : 'لا توجد رساله'}*\n\n`
  for (let mem of participants) {
- teks += `» @${mem.id.split('@')[0]}\n`
+ teks += `❤️ @${mem.id.split('@')[0]}\n`
  }
  Miku.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
  }
@@ -5070,7 +5070,7 @@ case '':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+      mikupic ='https://telegra.ph/file/f1a719ad79f830231d984.jpg'
     
         
  const needhelpmenu = `Did you mean/هل تعني *${prefix}help/المساعده*.`
