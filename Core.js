@@ -1483,7 +1483,7 @@ reply(` لا تنسي الانضمام معنا❤️!
 https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn
 
 *جروب 2*
-https://chat.whatsapp.com/JUngwIYTMVzCxMuismJuOY
+https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn
 
 *جروب 3*
 https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn`)
@@ -4824,8 +4824,8 @@ case 'help': case 'القائمه': case 'menu': case 'مساعده': case 'ال
       
  const helpmenu = `مرحبا *${pushname}*,
 
-انا *BOT ELGAZAR❤️*, 
-تم تطويره بواسطة * ELGAZAR ALWAZER❤️ *.
+انا *BOT RAIZEL❤️*, 
+تم تطويره بواسطة * RAIZEL❤️ *.
 
 ♠️ البادئة الخاصة بي هي:  ${prefix}
  
@@ -5077,7 +5077,7 @@ case 'help': case 'القائمه': case 'menu': case 'مساعده': case 'ال
 
 
  『  *${global.BotName}*  』
- *تم التطوير بواسطه:الجزار*
+ *تم التطوير بواسطه:رايزل*
 `
 
 
@@ -5127,11 +5127,11 @@ break
 
 
 
-case 'الجزار':
+case 'رايزل':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-const txt = `الجزار بيحبك🌚/رقمي للتواصل معايا https://api.whatsapp.com/send?phone=+201098906252ا.`
+const txt = `رايزل بيحبك🌚/رقمي للتواصل معايا https://api.whatsapp.com/send?phone=+967770500831.`
 const mikuarray= [
             "https://c.tenor.com/SOeIW-QVZvoAAAPo/scared-the-quintessential-quintuplets.mp4",
             "https://c.tenor.com/FDe7lTs0xvMAAAPo/miku-nakano-nakano-miku.mp4",
