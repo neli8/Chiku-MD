@@ -5109,10 +5109,10 @@ case '':
       mikupic ='https://telegra.ph/file/f1a719ad79f830231d984.jpg'
     
         
- const needhelpmenu = `اضغط علي القائمه لظهور قائمه الاوامر *${prefix}*.`
+ const needhelpmenu = `اضغط علي الأوامر لظهور قائمه الاوامر *${prefix}*.`
      
          let butRun = [
-                {buttonId: `-help`, buttonText: {displayText: 'القائمه✨'}, type: 1}
+                {buttonId: `-help`, buttonText: {displayText: 'الأوامر'}, type: 1}
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku.mp4'),gifPlayback:true,
