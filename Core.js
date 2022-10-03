@@ -696,9 +696,8 @@ During ${clockString(new Date - afkTime)}
 if (db.users[m.sender].afkTime > -1) {
 let user = global.db.users[m.sender]
 reply(`
-Pls try not to tag him!
-He's Offline ${user.afkReason ? ' after ' + user.afkReason : ''}
-During ${clockString(new Date - user.afkTime)}
+منور لقد عدت ${user.afkReason ? ' after ' + user.afkReason : ''}
+مده الغياب ${clockString(new Date - user.afkTime)}
 `.trim())
 user.afkTime = -1
 user.afkReason = ''
@@ -1811,7 +1810,7 @@ case 'delete': case 'del': {
  break
 */
 
- case 'حذف': case 'مسح': case 'delete': case 'del': {
+ case 'حذف': case 'مسح': case 'احذف': case 'امسح': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!isBotAdmins) return replay(mess.botadmin)
@@ -1868,7 +1867,7 @@ await Miku.sendMessage(m.chat, { delete: key })
  let user = global.db.users[m.sender]
  user.afkTime = + new Date
  user.afkReason = args.join(" ")
- replay(`${m.pushName} انه في وضع الاختفاء.\nبسبب : ${args.join(" ") ? args.join(" ") : ''}`)
+ replay(`${m.pushName} انه في وضع الاختفاء\nبسبب : ${args.join(" ") ? args.join(" ") : ''}`)
  }
  break
 
@@ -1879,7 +1878,7 @@ await Miku.sendMessage(m.chat, { delete: key })
  if (args.length < 1) return replay(`مثال:\n${prefix}نص عريض ${OwnerName}`)
  quere = args.join(" ")
  flipe = quere.split('').reverse().join('')
- replay(`\`\`\`「  اداه زغرفه النص  」\`\`\`\n*ادخل نص :*\n${quere}\n*نص مقلوب :*\n${flipe}`)
+ replay(`\`\`\`「  اداه عكس النص  」\`\`\`\n*ادخل نص :*\n${quere}\n*نص مقلوب :*\n${flipe}`)
  }
  break
 
