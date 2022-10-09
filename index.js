@@ -149,12 +149,13 @@ Miku.ev.on('group-participants.update', async (anu) => {
                 if (anu.action == 'add') {
                 let WAuserName = num
                 mikutext = `
-هلا بيك يعمري @${WAuserName.split("@")[0]},
+مرحباً بك 
+ @${WAuserName.split("@")[0]},
 
-انا *ᗷOT-ᗴᒪᘜᗩᘔᗩᖇ*, مرحبا بك في ${metadata.subject}.
+انا *بوت رايزل*, مرحبا بك في ${metadata.subject}.
 
-*وصف الجروب:*
-${metadata.desc}
+*قروب الدعم :*
+ https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn
 `
 
     let buttonMessage = {
@@ -170,7 +171,7 @@ Miku.sendMessage(anu.id, buttonMessage)
                     mikutext = `
 مع السلامه 👋, @${WAuserName.split("@")[0]},
 
-مع السلامه اللي يغور يجي مكانو طابور😍, واللي بعنا خسر دلعنا😂💔!
+مع السلامه اللي يطلع يجي غيره, واللي بعنا خسر دلعنا😂💔!
 `
 
     let buttonMessage = {
