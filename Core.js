@@ -2242,7 +2242,7 @@ await Miku.sendMessage(m.chat, { delete: key })
    break
 
 
-   case 'nsfw': case 'الاباحي': {
+   case 'تيهيهيعيعقاقاقافافاعير': case 'اياياياياقاقاقاقع': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -2258,12 +2258,12 @@ await Miku.sendMessage(m.chat, { delete: key })
  members.map(async adm => {
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
- Miku.sendMessage(from, {text: `\`\`\`「 ملاحظه 」\`\`\`\n\nتم فتح ميزه الاباحي وكدا كل الاعضاء يقدرو يشغلو الاباحي في الجروب!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ Miku.sendMessage(from, {text: `\`\`\`「 ملاحظه 」\`\`\`\n\الرجاء من جميع القروب ذكر الله والصلاة على رسول الله!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "off") {
  if (!AntiNsfw) return replay('تم إلغاء تنشيطه بالفعل')
  let off = ntnsfw.indexOf(from)
  ntnsfw.splice(off, 1)
- replay('اوامر الاباحي معطله!')
+ replay('اوامر لاشيء معطله!')
  } else {
    let buttonsntnsfw = [
    { buttonId: `-nsfw on`, buttonText: { displayText: 'فتح' }, type: 1 },
@@ -5115,7 +5115,7 @@ case '':
  const needhelpmenu = `مرحبا بك في بوت رايزل لظهور قائمه الاوامر اكتب -الاوامر او اضغط علي الأوامر *${prefix}*.`
      
          let butRun = [
-                {buttonId: `-help`, buttonText: {displayText: 'الأمور'}, type: 1}
+                {buttonId: `-help`, buttonText: {displayText: 'الأوامر'}, type: 1}
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku.mp4'),gifPlayback:true,
