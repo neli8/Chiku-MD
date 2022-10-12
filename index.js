@@ -152,7 +152,8 @@ Miku.ev.on('group-participants.update', async (anu) => {
 مرحباً بك 
  @${WAuserName.split("@")[0]},
 
-انا *بوت رايزل*, مرحبا بك في ${metadata.subject}.
+انا *بوت رايزل*, مرحبا بك في
+ ${metadata.subject}.
 
 *قروب الدعم :*
  https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn
