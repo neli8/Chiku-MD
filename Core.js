@@ -1387,8 +1387,8 @@ switch(command) {
     body: " ", 
     thumbnail: fs.readFileSync("Assets/pic2.jpg"),
     mediaType:1,
-    mediaUrl: 'https://telegra.ph/file/f1a719ad79f830231d984.jpg',
-    sourceUrl: "https://telegra.ph/file/f1a719ad79f830231d984.jpg"
+    mediaUrl: 'https://telegra.ph/file/39272916fd98efa5fec86.jpg',
+    sourceUrl: "https://telegra.ph/file/39272916fd98efa5fec86.jpg"
     }}*/
 
     }
@@ -1416,7 +1416,7 @@ case 'بروفايل': case 'profile': case 'انا':
     
           } catch (e) {
      
-      pfp ='https://telegra.ph/file/f1a719ad79f830231d984.jpg'
+      pfp ='https://telegra.ph/file/39272916fd98efa5fec86.jpg'
     }
 
      const profilexx = `*「 معلومات البروفايل 」*\n\n*المنشن* : ${pushname}\n*البايو* : ${bioo}\n*مشرف فالقروب؟* : ${adn}\n*لفل* : ${levelMenu}\n*اكس بي* : ${xpMenu} مستمر لـ ${reqXp}\n*مستوي* : ${role}`
@@ -1582,7 +1582,7 @@ xfarrapi.Film(q)
 break
 
 
-case 'wallpaper': case 'animewallpaper': case 'ويلبر': {
+case 'wallpaper': case 'خلفية': case 'ويلبر': {
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!args.join(" ")) return reply("اكتب اسم الانمي اللي تبحث عنو بالانجليزي!")
@@ -2242,7 +2242,7 @@ await Miku.sendMessage(m.chat, { delete: key })
    break
 
 
-   case 'تيهيهيعيعقاقاقافافاعير': case 'اياياياياقاقاقاقع': {
+   case 'الصلاة': case 'الصلاه': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -2251,7 +2251,7 @@ await Miku.sendMessage(m.chat, { delete: key })
  if (args[0] === "on") {
  if (AntiNsfw) return replay('نشط بالفعل')
  ntnsfw.push(from)
- replay('تم تمكين ميزه الاباحي!')
+ replay('تم تمكين ميزه لا شيءا!')
  var groupe = await Miku.groupMetadata(from)
  var members = groupe['participants']
  var mems = []
@@ -2309,7 +2309,7 @@ case 'listonline': case 'الصاحيين': case 'المتصلين':{
  let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
  let online = [...Object.keys(store.presences[id]), botNumber]
  let liston = 1
- Miku.sendText(m.chat, '  「 *الناس المتصله* 」\n\n' + online.map(v => `${liston++} . @` + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
+ Miku.sendText(m.chat, '  「 *المتصلين الأموات* 」\n\n' + online.map(v => `${liston++} . @` + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
  }
  break
 
@@ -2441,7 +2441,7 @@ if (isBanChat) return reply(mess.bangc)
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
- let teks = `══✪〘 *منشن للكل👥* 〙✪══
+ let teks = `══✪｢🗿منشن جماعي🗿｣✪══
   
  *الرساله : ${args.join(" ") ? args.join(" ") : 'لا توجد رساله'}*\n\n`
  for (let mem of participants) {
@@ -2608,7 +2608,7 @@ let mentioned = participants.map(v => v.jid)
     break
 
 
-    case 'group': case 'جروب': {
+    case 'group': case 'جروب': case 'قروب': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!m.isGroup) return replay(mess.grouponly)
@@ -2647,7 +2647,7 @@ let mentioned = participants.map(v => v.jid)
      }
      break
 
-     case 'نزل': case 'تنزيل': {
+     case 'نزل': case 'تنزيل': case 'اقاله': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!m.isGroup) return replay(mess.grouponly)
@@ -3567,7 +3567,7 @@ case 'pinterest': case 'pin': {
 
 
 
-case 'زرف': case 'take': case 'stickerwm': case 'سرقه':{
+case 'زرف': case 'take': case 'سرقة': case 'سرقه':{
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 if (!args.join(" ")) return reply(`اكتب الامر ويليه حقوق الملصق`)
@@ -3611,7 +3611,7 @@ await fs.unlinkSync(memek)
 }
 break
 
-case 'استيكر': case 'sticker': case 's': case 'ملصق': {
+case 'استيكر': case 'sticker': case 's': case 'ملصق': case 'س': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
  if (/image/.test(mime)) {
@@ -3711,10 +3711,10 @@ case 'beautifulcheck':
 Miku.sendMessage(from, { text: `*${command}*\n\nالاسم : ${q}\nالجواب : *${tik}%*` }, { quoted: m })
 					break
 
-case 'awesomecheck':
-  case 'greatcheck':
-    case 'gaycheck':
-      case 'cutecheck':
+case 'الحب':
+  case 'معدل':
+    case 'ذكاء':
+      case 'غباء':
           case 'lesbiancheck':
              case 'hornycheck':
                  case 'prettycheck':
@@ -4120,7 +4120,7 @@ reply(mess.waiting)
                 })
 break
 
-case 'foxgirl':
+case 'ثعلبه':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4184,7 +4184,7 @@ break
 
 
 
-case 'crossplay': case 'crosplay': case 'cosplay':
+case 'كوسبلاي': case 'crosplay': case 'cosplay':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4898,10 +4898,10 @@ case 'help': case 'القائمه': case 'menu': case 'مساعده': case 'ال
 ⧉ -رستر
 ⧉ رستارت لرابط الجروب 
  
-⧉ -رفع
+⧉ -ترقيه
 ⧉ رفع عضو لمشرف 
  
-⧉ -تنزيل
+⧉ -اقاله
 ⧉ تنزيل عضو من المشرف 
 
 ⧉ -تغيرالاسم
@@ -4953,7 +4953,7 @@ case 'help': case 'القائمه': case 'menu': case 'مساعده': case 'ال
 
 ⋄═──═◞🎆 قائمة التحويل 🎆◟━──━⋄
 
-⧉ -مـلـصـق
+⧉ -ملصق
 ⧉ انشاء ملصقات عادية ومتحركة 
  
 ⧉ -سرقه
@@ -5088,7 +5088,7 @@ case 'help': case 'القائمه': case 'menu': case 'مساعده': case 'ال
 
     {buttonId: `-owner`, buttonText: {displayText: 'المطور'}, type: 1},
 
-    {buttonId: `-nsfw`, buttonText: {displayText: 'لا شيء'}, type: 1}
+    {buttonId: `-nsfw`, buttonText: {displayText: 'الصلاه'}, type: 1}
 
     ]
                 let buttonMessage = {
@@ -5109,7 +5109,7 @@ case '':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-      mikupic ='https://telegra.ph/file/f1a719ad79f830231d984.jpg'
+      mikupic ='https://telegra.ph/file/39272916fd98efa5fec86.jpg'
     
         
  const needhelpmenu = `مرحبا بك في بوت رايزل لظهور قائمه الاوامر اكتب -الاوامر او اضغط علي الأوامر *${prefix}*.`
@@ -5177,7 +5177,7 @@ const mikuarray= [
 
 break
 
-case 'اضافة': case 'اضافه':{     			
+case 'اضافة': case 'اضافه': case 'add':{     			
     if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
  let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
