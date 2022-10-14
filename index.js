@@ -157,6 +157,10 @@ Miku.ev.on('group-participants.update', async (anu) => {
 
 *قروب الدعم :*
  https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn
+*قروب2*
+https://chat.whatsapp.com/HM8bHOyD7cHDn82txihKNA
+*قروب سوالف خشو نطقطق*
+https://chat.whatsapp.com/CO4twOMsqDn6vybNXaG4Jv
 `
 
     let buttonMessage = {
