@@ -7,15 +7,15 @@ global.autoReadAll = false
 global.antitags = true
 
 
-global.Owner = ['967770500831']
-global.OwnerNumber = ['967770500831']
-global.ownertag = ['967770500831']
-global.BotName = "🔱 𝚁𝚊𝚒𝚣𝚎𝚕 𝙶𝚎𝚘𝚛𝚐𝚎 🔱"
-global.packname = "🔱 𝚁𝚊𝚒𝚣𝚎𝚕 𝙶𝚎𝚘𝚛𝚐𝚎 🔱"
-global.author = "★967770500831★"
-global.OwnerName = "🔱 𝚁𝚊𝚒𝚣𝚎𝚕 𝙶𝚎𝚘𝚛𝚐𝚎 🔱"
-global.BotSourceCode = "https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn"
-global.SupportGroupLink = "https://chat.whatsapp.com/CMp1e9NHmHU5K5sCM2mmKn"
+global.Owner = ['212645830816']
+global.OwnerNumber = ['212645830816']
+global.ownertag = ['212645830816']
+global.BotName = "⚡ 𝐍𝐨𝐞𝐥 𝐒𝐚𝐦𝐚 ⚡"
+global.packname = "🌊 𝐍𝐨𝐞𝐥 𝐁𝐨𝐭 🌊"
+global.author = "★212645830816★"
+global.OwnerName = "🍷 𝐝𝐚𝐛𝐢-𝐬𝐚𝐧 🍷"
+global.BotSourceCode = "https://instagram.com/m_o_s_71?igshid=YmMyMTA2M2Y="
+global.SupportGroupLink = "https://www.tiktok.com/@dabi2392?_t=8WXNM1DZSGU&_r=1"
 global.sessionName = "session"
 
 // Prefix //
