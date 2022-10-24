@@ -11,9 +11,9 @@ global.Owner = ['212645830816']
 global.OwnerNumber = ['212645830816']
 global.ownertag = ['212645830816']
 global.BotName = "⚡ 𝐍𝐨𝐞𝐥 𝐒𝐚𝐦𝐚 ⚡"
-global.packname = "🌊 𝐍𝐨𝐞𝐥 𝐁𝐨𝐭 🌊"
-global.author = "★212645830816★"
-global.OwnerName = "🍷 𝐝𝐚𝐛𝐢-𝐬𝐚𝐧 🍷"
+global.packname = "🌊 𝐁𝐨𝐭 🌊"
+global.author = "⚡𝐍𝐨𝐞𝐥⚡"
+global.OwnerName = "🫧𝐝𝐚𝐛𝐢-𝐒𝐚𝐦𝐚🫧"
 global.BotSourceCode = "https://instagram.com/m_o_s_71?igshid=YmMyMTA2M2Y="
 global.SupportGroupLink = "https://www.tiktok.com/@dabi2392?_t=8WXNM1DZSGU&_r=1"
 global.sessionName = "session"
