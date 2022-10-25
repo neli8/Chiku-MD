@@ -1634,7 +1634,7 @@ if (isBan) return reply(mess.banned)
 if (isBanChat) return reply(mess.bangc)
 				   let cok = await fetchJson(`http://api.lolhuman.xyz/api/random/quotesimage?apikey=${lolkey}`)
 				   reply(mess.waiting)
-				  Miku.sendMessage(m.chat, { image: { url: cok }, caption: 'اي خدمه يروحي🌚♥...' }, { quoted: m })
+				  Miku.sendMessage(m.chat, { image: { url: cok }, caption: 'تفضل أيها المغامر/ة⚡♥...' }, { quoted: m })
 				  break
 
 case 'quotesanime': case 'quoteanime': case 'animequote': case 'animequotes':{
@@ -1791,7 +1791,7 @@ break
 if (isBanChat) return reply(mess.bangc)
 if (!args.join(" ")) return reply('أين هو الإيموجي؟')
 emoji.get(args.join(" ")).then(async(emoji) => {
-let mese = await Miku.sendMessage(m.chat, {image:{url:emoji.images[4].url}, caption: `اي خدمه يروحي🌚♥...`}, {quoted:m})
+let mese = await Miku.sendMessage(m.chat, {image:{url:emoji.images[4].url}, caption: `تفضل أيها الغامر/ة⚡♥...`}, {quoted:m})
 await Miku.sendMessage(from, {text:"اعمل ريب علي الصوره واكتب -استيكر"}, {quoted:mese})
 })
 }
