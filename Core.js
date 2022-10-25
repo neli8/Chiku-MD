@@ -695,7 +695,7 @@ reply(`
 if (db.users[m.sender].afkTime > -1) {
 let user = global.db.users[m.sender]
 reply(`
-منور لقد عدت ${user.afkReason ? ' after ' + user.afkReason : ''}
+منور بيتك لقد عدت ${user.afkReason ? ' after ' + user.afkReason : ''}
 مده الغياب ${clockString(new Date - user.afkTime)}
 `.trim())
 user.afkTime = -1
@@ -1419,7 +1419,7 @@ case 'بروفايل': case 'profile': case 'انا':
       pfp ='https://telegra.ph/file/39272916fd98efa5fec86.jpg'
     }
 
-     const profilexx = `*「 معلومات البروفايل 」*\n\n*المنشن* : ${pushname}\n*البايو* : ${bioo}\n*مشرف فالقروب؟* : ${adn}\n*لفل* : ${levelMenu}\n*اكس بي* : ${xpMenu} مستمر لـ ${reqXp}\n*مستوي* : ${role}`
+     const profilexx = `*「 ⚡معلومات البروفايل⚡ 」*\n\n*المنشن* : ${pushname}\n*البايو* : ${bioo}\n*مشرف فالقروب؟* : ${adn}\n*لفل* : ${levelMenu}\n*اكس بي* : ${xpMenu} مستمر لـ ${reqXp}\n*مستوي* : ${role}`
  
 
 
@@ -1750,7 +1750,7 @@ case 'coffee': case 'قهوه': {
                     ]
                     let buttonMessage = {
                         image: { url: 'https://coffee.alexflipnote.dev/random' },
-                        caption: `ها هي قهوتك...`,
+                        caption: `ها هي قهوتك سيدي/تي...`,
                         footer: `${BotName}`,
                         buttons: buttons,
                         headerType: 4
@@ -1834,7 +1834,7 @@ await Miku.sendMessage(m.chat, { delete: key })
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let anu = await store.chats.all().filter(v => v.id.endsWith('.net')).map(v => v)
- let teks = ` 「  قائمه المستخدمين  」\n\nالمجموع ${anu.length} يستخدم المستخدمون البوت في الخاص.`
+ let teks = ` 「  ⚡قائمه المستخدمين⚡  」\n\nالمجموع ${anu.length} يستخدم المستخدمون البوت في الخاص.`
  for (let i of anu) {
   teks += `\n\nبروفايل : @${i.id.split('@')[0]}\nشات : ${i.unreadCount}\nاخر محادثه : ${moment(i.conversationTimestamp * 1000).tz("Asia/Kolkata").format("DD/MM/YYYY HH:mm:ss")}`
  }
@@ -1846,7 +1846,7 @@ await Miku.sendMessage(m.chat, { delete: key })
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let anu = await store.chats.all().filter(v => v.id.endsWith('@g.us')).map(v => v.id)
- let teks = ` 「  قائمة مجموعات مستخدمي البوت  」\n\nالمجموع ${anu.length} المستخدمون يستخدمون الروبوت في المجموعات.`
+ let teks = ` 「  ⚡قائمة مجموعات مستخدمي البوت⚡  」\n\nالمجموع ${anu.length} المستخدمون يستخدمون الروبوت في المجموعات.`
  for (let i of anu) {
   let metadata = await Miku.groupMetadata(i)
   if (metadata.owner === "undefined") {
@@ -2309,7 +2309,7 @@ case 'listonline': case 'الصاحيين': case 'المتصلين':{
  let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat
  let online = [...Object.keys(store.presences[id]), botNumber]
  let liston = 1
- Miku.sendText(m.chat, '  「 *المتصلين الأموات* 」\n\n' + online.map(v => `${liston++} . @` + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
+ Miku.sendText(m.chat, '  「 *🕯المتصلين الأموات🕯* 」\n\n' + online.map(v => `${liston++} . @` + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
  }
  break
 
@@ -2441,11 +2441,11 @@ if (isBanChat) return reply(mess.bangc)
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
- let teks = `══✪｢🗿منشن جماعي🗿｣✪══
+ let teks = `══✪｢🌊منشن جماعي🌊｣✪══
   
  *الرساله : ${args.join(" ") ? args.join(" ") : 'لا توجد رساله'}*\n\n`
  for (let mem of participants) {
- teks += `❤️ @${mem.id.split('@')[0]}\n`
+ teks += `👤 @${mem.id.split('@')[0]}\n`
  }
  Miku.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
  }
@@ -2572,7 +2572,7 @@ let mentioned = participants.map(v => v.jid)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
  let response = await Miku.groupInviteCode(m.chat)
- Miku.sendMessage(m.chat, {text:`*اسم الجروب:* *${groupMetadata.subject}* \n\n*لينك الجروب :* \nhttps://chat.whatsapp.com/${response}l`, "contextInfo": {
+ Miku.sendMessage(m.chat, {text:`*⚡اسم الجروب⚡:* *${groupMetadata.subject}* \n\n*⚡لينك الجروب⚡ :* \nhttps://chat.whatsapp.com/${response}l`, "contextInfo": {
  mimetype: "image/jpeg",
  text: `${global.OwnerName}`,
  "forwardingScore": 1000000000,
@@ -2827,7 +2827,7 @@ case 'public': case 'عام': {
  if (isBanChat) return reply(mess.bangc)
  if (!isCreator) return reply(mess.botowner)
  Miku.public = false
- reply('يمكن للمالك فقط استخدامي الآن!')
+ reply('👤⚡يمكن للمالك فقط استخدامي الآن!')
  Miku.setStatus(`حاله البوت خاص`)
  }
  break
@@ -2976,7 +2976,7 @@ case 'google': case 'جوجل': {
  if (!args[0]) return reply(`مثال: ${prefix + command} <استفسار>\nالاستخدامات : ${prefix + command} ما هو الحب`)
  let google = require('google-it')
  google({'query': args.join(" ")}).then(res => {
- let teks = `「 *محرك بحث جوجل* 」\n\n*مصطلح البحث:* ${text}\n\n\n`
+ let teks = `「 *⚡محرك بحث جوجل⚡* 」\n\n*مصطلح البحث:* ${text}\n\n\n`
  for (let g of res) {
  teks += `*العنوان* : ${g.title}\n\n`
  teks += `*الوصف* : ${g.snippet}\n\n`
@@ -2995,7 +2995,7 @@ case 'google': case 'جوجل': {
  hx.igdl(args[0]).then(async(resed) => {
  ini_anu = []
  anu_list = []
- textbv = `「 *تنزيل انستجرام* 」\n\nاسم المستخدم : ${resed.user.username ? resed.user.name : "undefined"}\nالمتابعين : ${resed.user.followers}`
+ textbv = `「 *⚡تنزيل انستجرام⚡* 」\n\nاسم المستخدم : ${resed.user.username ? resed.user.name : "undefined"}\nالمتابعين : ${resed.user.followers}`
  urut = 1
  for (let i = 0; i < resed.medias.length; i++) {
  ini_anu.push({
@@ -3090,7 +3090,7 @@ if (isBanChat) return reply(mess.bangc)
              if (!text) return reply(`Please provide link!`)
                 if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(`*Invalid link!*`)
                 xfarrapi.Twitter(`${text}`).then(async (data) => {                    
-                    let txt = `「 *تنزيل تويتر* 」\n\n`
+                    let txt = `「 *⚡تنزيل تويتر⚡* 」\n\n`
                     txt += `*العنوان :* ${data.title}\n`
                     txt += `*الجوده :* ${data.medias[1].quality}\n`
                     txt += `*وسائل الاعلام :* ${data.medias[1].extension}\n`
@@ -3128,7 +3128,7 @@ if (isBanChat) return reply(mess.bangc)
 if (!args[0]) return reply(`Example :\n${prefix + command} https://twitter.com/cinema21/status/1517754155644821504?t=rUnbyqwh4vAE1QXMXlsVeQ&s=19`)
 try {
 let lotwit = await aiovideodl(args[0])
-teks = `「 التحميل من تويتر_ 」
+teks = `「 ⚡التحميل من تويتر⚡_ 」
 Caption : ${lotwit.title ? lotwit.title : "undefined"}
 Type : ${lotwit.medias[1].extension}
 Size : ${lotwit.medias[1].formattedSize}
@@ -3161,7 +3161,7 @@ case 'twddlxx': {
  ]
  let buttonMessage = {
  video: {url:args[0]},
- caption: "اي خدمه يروحي🌚♥...",
+ caption: "تفضل يا أيها المغامر/ة⚡♥...",
  footer: `${pushname}`,
  buttons: buttons,
  headerType: 4,
@@ -3178,7 +3178,7 @@ case 'twddlxx': {
                  if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`Invalid link!`)
              let bocil = require('@bochilteam/scraper')  
                  bocil.facebookdlv2(`${text}`).then(async (data) => {                   
-                     let txt = `「 *تنزيل فيسبوك* 」\n\n`
+                     let txt = `「 *⚡تنزيل فيسبوك⚡* 」\n\n`
                      txt += `*العنوان :* ${data.title}\n`
                      txt += `*الجوده :* ${data.result[0].quality}\n`
                      txt += `*الوصف:* ${data.description}\n`
@@ -3295,7 +3295,7 @@ reply(mess.error)
 } )
  console.log(musim_rambutan)
  const mikutiktoknowm = musim_rambutan.result.nowatermark
-  Miku.sendMessage(from, { video: { url: mikutiktoknowm }, caption: "اي خدمه يروحي🌚♥..." }, { quoted: m })
+  Miku.sendMessage(from, { video: { url: mikutiktoknowm }, caption: "تفضل أيها المغامر/ة⚡♥..." }, { quoted: m })
  }
 break
 
@@ -3396,7 +3396,7 @@ case 'شغل': case 'play': case 'song': case 'تشغيل': {
  ]
  let buttonMessage = {
  image: { url: anu.thumbnail },
- caption: `「  *التنزيل من يوتيوب*  」
+ caption: `「  *⚡التنزيل من يوتيوب⚡*  」
 
 *العنوان :* ${anu.title}
 *المده :* ${anu.timestamp}
@@ -3419,7 +3419,7 @@ case 'شغل': case 'play': case 'song': case 'تشغيل': {
  if (!args[0]) return reply(mess.nolink)
  try {
  hx.youtube(args[0]).then(async(res) => {
- textyt = `「  *تحميل من يوتيوب*  」
+ textyt = `「  *⚡تحميل من يوتيوب⚡*  」
 *العنوان :* ${res.title}
 *الحجم :* ${res.size}
 *الجوده :* ${res.quality}
@@ -3448,7 +3448,7 @@ case 'شغل': case 'play': case 'song': case 'تشغيل': {
  case 'ytvd': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- Miku.sendMessage(from, {video:{url:args[0]}, mimetype:"video/mp4", caption:"اي خدمه يروحي🌚♥...",}, {quoted:m})
+ Miku.sendMessage(from, {video:{url:args[0]}, mimetype:"video/mp4", caption:"تفضل أبها المغامر/ة⚡♥...",}, {quoted:m})
  }
  break
 
@@ -3485,8 +3485,8 @@ if (isBanChat) return reply(mess.bangc)
          reply(mess.waiting)
          let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
          let random = anu[Math.floor(Math.random() * anu.length)]
-         Miku.sendMessage(m.chat, { image: { url: random.male }, caption: `ولد🙎🏻‍♂️` }, { quoted: m })
-         Miku.sendMessage(m.chat, { image: { url: random.female }, caption: `بنت️🙎🏻‍♀️` }, { quoted: m })
+         Miku.sendMessage(m.chat, { image: { url: random.male }, caption: `مغامر🧝🏻‍♂️` }, { quoted: m })
+         Miku.sendMessage(m.chat, { image: { url: random.female }, caption: `مغامرة🧝🏻‍♀️` }, { quoted: m })
      }
  break
 
@@ -3517,7 +3517,7 @@ if (!isUrl(args[0]) && !args[0].includes('youtube.com')) return reply(`The link 
 let quality = args[1] ? args[1] : '360p'
 let media = await ytv(text, quality)
 if (media.filesize >= 999999) return reply('*File Over Limit* '+util.format(media))
-var capti = `*「 يوتيوب فيديو 」*\n\n*اللقب* : ${media.title}\n*حجم الملف* : ${media.filesizeF}\n*العنوان* : ${isUrl(text)}\n*تحويله* : Mp4\n*القرار* : ${args[1] || '360p'}`
+var capti = `*「 ⚡يوتيوب فيديو⚡ 」*\n\n*اللقب* : ${media.title}\n*حجم الملف* : ${media.filesizeF}\n*العنوان* : ${isUrl(text)}\n*تحويله* : Mp4\n*القرار* : ${args[1] || '360p'}`
 var buf = await getBuffer(media.thumb)
 Miku.sendMessage(m.chat, { image: { url: media.thumb }, jpegThumbnail:buf, caption: `${capti}` }, { quoted: m })
 Miku.sendMessage(m.chat, { video: { url: media.dl_link }, jpegThumbnail:buf, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `Here you go!` }, { quoted: m }).catch((err) => reply(mess.error))
@@ -3667,11 +3667,11 @@ if (!m.isGroup) return replay(`${mess.grouponly}`)
 let member = participants.map(u => u.id)
 let orang = member[Math.floor(Math.random() * member.length)]
 let jodoh = member[Math.floor(Math.random() * member.length)]
-let jawab = `@${orang.split('@')[0]} 「 معلش زوجناكم لأنكم تصلحون لبعض 🤡 」◣ @${jodoh.split('@')[0]}
-「 الي يشوفهم مناسبين لبعض زيي يضغط يب 🤡 」◣`
+let jawab = `@${orang.split('@')[0]} 「 معلش زوجناكم لأنكم تصلحون لبعض🌝⚡ 」◣ @${jodoh.split('@')[0]}
+「 الي يشوفهم مناسبين لبعض زيي يضغط يب 😂🤡 」◣`
 let menst = [orang, jodoh]
 let buttons = [
-{ buttonId: '「 يب هم مناسبين لبعض」', buttonText: { displayText: '「 يب هم مناسبين لبعض😂🤡 」◣' }, type: 1 }
+{ buttonId: '「 يب هم مناسبين لبعض😂🤡」', buttonText: { displayText: '「 يب هم مناسبين لبعض😂🤡 」◣' }, type: 1 }
 ]
 await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: menst})
 }
@@ -3688,7 +3688,7 @@ let jawab = `👫 رفيق الروح
 @${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
 let ments = [me, jodoh]
 let buttons = [
-{ buttonId: '❤️', buttonText: { displayText: 'كن توأم روحي❤️' }, type: 1 }
+{ buttonId: '❤️', buttonText: { displayText: 'كن توأم روحي⚡❤️' }, type: 1 }
 ]
 await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
 }
@@ -4024,7 +4024,7 @@ reply(mess.waiting)
     ]
   let button2Messages = {
    image: {url:waifudd.data.url},
-   caption:  `اي خدمه يروحي🌚♥...`,
+   caption:  `تفضل أيها المغامر/ة⚡♥...`,
   buttons: trapbot,
   headerType: 1
   }     
@@ -4068,7 +4068,7 @@ reply(mess.waiting)
     ]
   let button4Messages = {
    image: {url:waifudd.data.url},
-   caption:  `اي خدمه يروحي🌚♥...`,
+   caption:  `تفضل أيها المغامر/ة⚡♥...`,
   buttons: nwaifubot,
   headerType: 1
   }      
@@ -4089,7 +4089,7 @@ reply(mess.waiting)
         ]
       let buttonsssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `اي خدمه يروحي🌚♥...`,
+       caption:  `تفضل أيها المغامر/ة⚡♥...`,
       footer: `${global.BotName}`,
       buttons: wbuttsss,
       headerType: 4
@@ -4110,7 +4110,7 @@ reply(mess.waiting)
         ]
       let button1ssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `اي خدمه يروحي🌚♥...`,
+       caption:  `تفضل أيها المغامر/ة⚡♥...`,
       footer: `${global.BotName}`,
       buttons: wbuttsss,
       headerType: 4
@@ -4152,7 +4152,7 @@ reply(mess.waiting)
     ]
   let xx1button3Messages = {
    image: {url:waifudd.data.url},
-   caption:  `اي خدمه يروحي🌚♥...`,
+   caption:  `تفضل أيها المغامر/ة⚡♥...`,
   buttons: xxhnekobot,
   headerType: 1
   }      
@@ -4172,7 +4172,7 @@ reply(mess.waiting)
         ]
       let button112ssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `اي خدمه يروحي🌚♥...`,
+       caption:  `تفضل أيها الغامر/ة⚡♥...`,
       footer: `${global.BotName}`,
       buttons: wbuttsss,
       headerType: 4
@@ -4219,7 +4219,7 @@ reply(mess.waiting)
         ]
       let buttonssMessage = {
        image: {url:waifud.data.url},
-       caption:  `اي خدمه يروحي🌚♥...`,
+       caption:  `تفضل أيها المغامر/ة⚡♥...`,
       footer: `${global.BotName}`,
       buttons: wbutsss,
       headerType: 4
@@ -4244,7 +4244,7 @@ reply(mess.waiting)
         ]
       let buttonssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `اي خدمه يروحي🌚♥...`,
+       caption:  `تفضل أيها المغامر/ة⚡♥...`,
       footer: `${global.BotName}`,
       buttons: wbuttsss,
       headerType: 4
@@ -4526,7 +4526,7 @@ var wbutsss = [
          ]
       let buttonzMessage = {
       image: {url:ud.data.url},
-       caption:  `اي خدمه يروحي🌚♥...`,
+       caption:  `تفضل أيها المغامر/ة⚡♥...`,
       footer: `${global.BotName}`,
           buttons: wbutsss,
      headerType: 4
@@ -4547,7 +4547,7 @@ case 'awoo':
     ]
   let button1Messages = {
    image: {url:waifudd.data.url},
-   caption:  `اي خدمه يروحي🌚♥...`,
+   caption:  `تفضل أيها المغامر/ة⚡♥...`,
    footer: `${global.BotName}`,
   buttons: wbuttsss,
   headerType: 2
@@ -4683,7 +4683,7 @@ reply(mess.waiting)
     ]
         let button4Messagess = {
         image: {url:waifuddd.data.url},
-        caption: 'أكثر من وايفي سوف يدمر لايفو الخاص بك بالتأكيد!',
+        caption:',تفضل أيها المغامر/ة🌝⚡!',
         buttons: wbuttsssr,
         headerType: 4
          }     
@@ -4704,7 +4704,7 @@ reply(mess.waiting)
     ]
         let buttonMessagessf = {
         image: {url:waifuddd.data.url},
-        caption: 'اي خدمه يروحي🌚❤️...',
+        caption: 'تفضل أيها المغامر/ة⚡❤️...',
         buttons: wbuttsssr,
         headerType: 2
          }     
@@ -4726,7 +4726,7 @@ reply(mess.waiting)
     ]
         let buttonMessagessfgr = {
         image: {url:waifuddd.data.url},
-        caption: 'لا تكن لولي كون!',
+        caption: 'تفضل لولي كون😂🌝⚡!',
         buttons: wbuttsssr,
         headerType: 2
          }     
@@ -5105,7 +5105,7 @@ case 'help': case 'القائمه': case 'menu': case 'مساعده': case 'ال
 
     {buttonId: `-owner`, buttonText: {displayText: 'المطور'}, type: 1},
 
-    {buttonId: `-nsfw`, buttonText: {displayText: 'الصلاه'}, type: 1}
+    {buttonId: `-nsfw`, buttonText: {displayText: 'الهواء'}, type: 1}
 
     ]
                 let buttonMessage = {
@@ -5129,7 +5129,7 @@ case '':
       mikupic ='https://telegra.ph/file/39272916fd98efa5fec86.jpg'
     
         
- const needhelpmenu = `مرحبا بك في بوت رايزل لظهور قائمه الاوامر اكتب -الاوامر او اضغط علي الأوامر *${prefix}*.`
+ const needhelpmenu = `مرحبا بك في بوتة نويل سيلفا لو بدك أوامر أكتب 《-الاوامر》 استمتع⚡🌝 *${prefix}*.`
      
          let butRun = [
                 {buttonId: `-help`, buttonText: {displayText: 'الأوامر'}, type: 1}
